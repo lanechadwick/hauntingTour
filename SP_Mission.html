@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+    7E
+    New Perspectives on HTML5 and CSS3, 7th Edition
+    Tutorial 4
+    Tutorial Case
+    
+    Home Page of the Komatsu Family at Tree and Book
+    Author: Lane Chadwick   
+    Date:   08/20/19
+
+    Filename: SP_Home.html
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, inital-scale=1" />
+   <meta name="description" content="Welcome to your worst nightmare, come see if you dare!">
+   <meta name="keywords" content="haunted, haunt, forest, halloween, schedule, September, October">
+   <link rel="shortcut icon" type="image/png" href="images/s.jpg"/>
+   <link href="css/SP_Visual1.css" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+   /* Make the image fully responsive */
+   .carousel-inner img {
+       width: 100%;
+       height: 100%;
+   }
+   </style>
+
+   <title>Scary Places</title>      
+
+</head>
+
+<body>
+     
+   <article>
+      <header>
+         <div class="container">
+            <nav>
+                  <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
+                   <ul>
+                 <li><a href="SP_Home.html">Home</a></li>
+                 <li><a href="SP_Tours.html">Tours</a></li>
+                 <li><a href="SP_About.html">Feedback</a></li>
+                 <li><a href="SP_Mission.html">Gallery</a></li>
+                   </ul>
+                  </nav>
+               </div>	
+                
+      </header>
+
+   </article> 
+   
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+   <!-- Indicators -->
+   <ul class="carousel-indicators">
+     <li data-target="#demo" data-slide-to="0" class="active"></li>
+     <li data-target="#demo" data-slide-to="1"></li>
+     <li data-target="#demo" data-slide-to="2"></li>
+   </ul>
+   
+   <!-- The slideshow -->
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+        <a href="SP_Error.html">
+       <img src="images/image-1.png" alt="Los Angeles" width="1100" height="500">
+      </a>
+     </div>
+     <div class="carousel-item">
+         <a href="SP_Error.html"> 
+       <img src="images/image-2.jpg" alt="Chicago" width="1100" height="500">
+       </a>
+     </div>
+     <div class="carousel-item">
+         <a href="SP_Error.html">
+       <img src="images/image-3.jpg" alt="New York" width="1100" height="500">
+       </a>
+     </div>
+   </div>
+   
+   <!-- Left and right controls -->
+   <a class="carousel-control-prev" href="#demo" data-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+   </a>
+   <a class="carousel-control-next" href="#demo" data-slide="next">
+     <span class="carousel-control-next-icon"></span>
+   </a>
+ </div>
+  
+            
+          
+            </div>  
+      
+        <!--End of mState Section-->
+      <aside>  <!--Video-->
+               <h1>It's All In Good Fun!</h1>
+               <p> Standard Practices at Scary Places
+               </p>    
+               <p>Click the play button to view the horrors at Scary Places. Viwer Beware!
+               </p>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/axQGVWRVjmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </aside>
+   <footer>
+        <!--end of video-->
+     
+   </footer>
+   
+</body>
+</html>

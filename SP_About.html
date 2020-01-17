@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+    7E
+    New Perspectives on HTML5 and CSS3, 7th Edition
+    Tutorial 4
+    Tutorial Case
+    
+    Home Page of the Komatsu Family at Tree and Book
+    Author: Lane Chadwick   
+    Date:   08/20/19
+
+    Filename: SP_Home.html
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, inital-scale=1" />
+   <meta name="description" content="Welcome to your worst nightmare, come see if you dare!">
+   <meta name="keywords" content="haunted, haunt, forest, halloween, schedule, September, October">
+   <link rel="shortcut icon" type="image/png" href="images/s.jpg"/>
+   <link href="css/SP_Visual1.css" rel="stylesheet"/>
+   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+   <title>Scary Places</title>      
+
+</head>
+
+<body>
+
+   <article>
+      <header>
+        <div class="container">
+            <nav>
+                  <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
+                   <ul>
+                 <li><a href="SP_Home.html">Home</a></li>
+                 <li><a href="SP_Tours.html">Tours</a></li>
+                 <li><a href="SP_About.html">Feedback</a></li>
+                 <li><a href="SP_Mission.html">Gallery</a></li>
+                   </ul>
+                  </nav>
+               </div>		 
+      </header>
+      <!--Survey-->
+      <section>
+        <h1>Customer Survey</h1>
+         <p>Let us know where we can Improve!</p>
+        <form id="survey" action="http://www.example.com/redball/survey" method="post">
+           <fieldset id="custInfo">
+              <legend>Customer Information</legend>
+              <div class="formRow">
+              <label for ="name">Name*</label>
+              <input name="custName" id="name" type="text" placeholder="First and Last name" required />
+              </div>
+  
+              <div class="formRow">
+              <label for ="phone">Phone Number</label>
+              <input name="custPhone" id="phone" type="tel" value="(###) ###-####" patern="^\d{10}$|^(\(\d{3}\)\s*?\d{3}[\s-]?\d{4}$)" />
+              </div>
+  
+              <div class="formRow">
+              <label for ="mail">Email*</label>
+              <input name="custEmail" id="mail" type="email" required />
+              </div>
+  
+  
+              <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+              <label for ="mailCB">Add me to your mailing list for great coupons and specials</label>
+  
+  
+  
+              <label for="commBox">Tell us more aobut your experience!</label>
+              <textarea name="custExp" id="commBox"></textarea>
+  
+           </fieldset>
+           
+           <div id="buttons">
+              <input type="submit" value="Submit My Survey" />
+              <input type="reset" value="Cancel" />
+           </div>
+           <!--End of Survey-->
+  
+        </form>
+  
+       
+     </section>
+      
+      
+      <aside>
+      </aside>
+      
+   </article>   
+ 
+   
+   <footer>
+           
+      </nav>
+
+   </footer>
+   
+</body>
+</html>
