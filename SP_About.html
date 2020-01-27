@@ -46,32 +46,32 @@
       <section>
         <h1>Customer Survey</h1>
          <p>Let us know where we can Improve!</p>
-        <form id="survey" action="http://www.example.com/redball/survey" method="post">
+        <form id="survey" action="thankyou.php" method="post">
            <fieldset id="custInfo">
               <legend>Customer Information</legend>
               <div class="formRow">
               <label for ="name">Name*</label>
-              <input name="custName" id="name" type="text" placeholder="First and Last name" required />
+              <input name="custName" id="custName" type="text" placeholder="First and Last name" required />
               </div>
   
               <div class="formRow">
               <label for ="phone">Phone Number</label>
-              <input name="custPhone" id="phone" type="tel" value="(###) ###-####" patern="^\d{10}$|^(\(\d{3}\)\s*?\d{3}[\s-]?\d{4}$)" />
+              <input name="custPhone" id="custPhone" type="tel" value="(###) ###-####" patern="^\d{10}$|^(\(\d{3}\)\s*?\d{3}[\s-]?\d{4}$)" />
               </div>
   
               <div class="formRow">
               <label for ="mail">Email*</label>
-              <input name="custEmail" id="mail" type="email" required />
+              <input name="custEmail" id="custEmail" type="email" required />
               </div>
   
   
-              <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+              <input name="mailMe" id="mailMe" value="yes" type="checkbox" />
               <label for ="mailCB">Add me to your mailing list for great coupons and specials</label>
   
   
   
               <label for="commBox">Tell us more aobut your experience!</label>
-              <textarea name="custExp" id="commBox"></textarea>
+              <textarea name="custExp" id="custExp"></textarea>
   
            </fieldset>
            

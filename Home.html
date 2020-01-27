@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Author: Lane Chadwick
+		   ----October 17th, 2019------
+   ----Adding Jquery to Bio to give the text an animation----
+   ---October 23rd, 2019-------
+   ----Fixing the Media query items on this page, as well as changing the home pic style------
+			-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lane Chadwick's Portfolio">
+    <meta name="keywords" content="Lane, Bio, Contact, Portfolio">
+    <meta name="author" content="Lane Chadwick">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "black")
+      .slideDown(2000);
+  });
+});
+</script>
+	<!--  end of jquery giving an animation and color change to my bio paragraph-->
+	
+	<title>Lane's Portfolio</title>
+</head>
+<body>
+<main>
+<!-- Use the header area for the website name or logo -->
+	<header>
+	
+	<div class="container">
+		<nav>
+			  <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
+			   <ul>
+			 <li><a href="Home.html">Home</a></li>
+			 <li><a href="education.html">Experience</a></li>
+			 <li><a href="contact.html">Feedback</a></li>
+			   </ul>
+			  </nav>
+		   </div>
+	</header>
+
+<div id="homepic">
+<img src="images/home.jpg.jpg" alt="Portrait" ><br> 
+</div>
+
+<article>
+<p id="p1">My name is Lane Chadwick and I'm beginning the software development<br>
+progam at College of western Idaho. Here is a portfolio of my work experience, education <br>
+and how to contact me!</p>
+<button>Click me for bio</button>
+</article>
+
+<!-- Use the footer area to add webpage footer content -->
+
+
+	<footer>
+<p><a href="https://github.com/" target="_blank"><img src="images/github.png" alt="social icon for github"></a>
+				<a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="social icon for linkedin"></a><br>
+	<a href="mailto:lanechadwck@mycwi.cc">lanechadwck@mycwi.cc</a><br>
+	<a href="tel:1-208-696-9382">208-696-9382</a>
+	</footer>
+</main>
+</body>
+</html>

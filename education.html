@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Author: Lane Chadwick
+	   ----October 17th, 2019------
+   ----Adding a link to pong game----
+   ---October 23rd, 2019-------
+   ----removal of link to pong game, Added a carousel that includes both examples of work------
+			-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lane Chadwick's Portfolio">
+    <meta name="keywords" content="Lane, Bio, Contact, Portfolio">
+    <meta name="author" content="Lane Chadwick">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+div#myCarousel{
+	width: 80%; 
+	height: 50%;
+    margin: auto;
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+width: 100%; /* use this, or not */
+margin: auto;
+}
+	</style>
+	<style>
+	body {
+		background-color:#B8D1EB;
+	}
+	</style>
+</head>
+<body> 
+
+	<!-- End of jquery animating my content to one side of the page-->
+
+	<title>Lane's Portfolio</title>
+</head>
+<body>
+<main>
+<!-- Use the header area for the website name or logo -->
+	<header>
+	
+	<div class="container">
+		<nav>
+			  <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
+			   <ul>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="education.html">Experience</a></li>
+				<li><a href="contact.html">Feedback</a></li>
+			   </ul>
+			  </nav>
+		   </div>
+	</header>
+	<article>
+	<h1>Software Development Experience</h1>
+	<table>
+	<tr><th><b>Platform</b></th><th><b>Experience</b></th><th><b>Year</b></th></tr>
+	<tr><td>C#</td><td>Beginner</td><td>1</td></tr>
+	<tr><td>HTML/CSS</td><td>Beginner</td><td>1</td></tr>
+	</table>
+	<h1>Work Experience</h1>
+	<ul class="worklist">
+	<li>House Mover at Assoicated Pacific Movers -- 1 year</li>
+	<li>Detailer at Peterson Stampede -- 2 years</li>
+	<li>Freshman Linebacker Coach at Mountain View High School -- 2 years</li>
+	<li>Garden Center Associate at FredMyer's  -- Current Job</li>
+	</ul>
+	<h1>Work Examples</h1>
+	</article>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		</ol>
+	  
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+		  <div class="item active">
+			<a href="pong.html"><img src="images/pongshot.PNG" alt="pong"></a>
+		  </div>
+	  
+		  <div class="item">
+			<a href="SP_Home.html"><img src="images/scary.PNG" alt="website example">
+		  </div>
+	  
+	  
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>
+
+	
+
+
+		<footer>
+<p><a href="https://github.com/" target="_blank"><img src="images/github.png" alt="social icon for github"></a>
+   <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="social icon for linkedin"></a><br>
+	<a href="mailto:lanechadwck@mycwi.cc">lanechadwck@mycwi.cc</a><br>
+	<a href="tel:1-208-696-9382">208-696-9382</a>
+	</footer>
+</div>
+</main>
+</body>
+</html>

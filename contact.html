@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Author: Lane Chadwick
+	   ----October 17th, 2019------
+   ----Adding Jquery border to form----
+   ---October 23rd, 2019-------
+   ----removal of Jquery border to form------
+
+			-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lane Chadwick's Portfolio">
+    <meta name="keywords" content="Lane, Bio, Contact, Portfolio">
+    <meta name="author" content="Lane Chadwick">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+	
+	<title>Lane's Portfolio</title>
+</head>
+<body>
+<main>
+<!-- Use the header area for the website name or logo -->
+	<header>
+	<div class="container">
+		<nav>
+			  <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
+			   <ul>
+				<li><a href="Home.html">Home</a></li>
+				<li><a href="education.html">Experience</a></li>
+				<li><a href="contact.html">Feedback</a></li>
+			   </ul>
+			  </nav>
+		   </div>
+	</header>
+
+	    <form action="mailto:lanechadwick@mycwi.cc?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
+		<label for="company">Your Name:</label><br> 
+		<input type="text" name="Name" size="50" id="company"><br>
+		
+		<label for="contact">Email:</label><br>
+		<input type="text" name="Emailto" size="30" id="contact"><br><br>
+		
+		<label>Enter your comments:</label><br>
+		<textarea cols="100" rows="10" name="comment"></textarea><br><br>
+		
+		   <fieldset>
+          <legend>Selecting elements</legend>
+          <p>
+             <label>Grade the website One through Ten</label>
+             <select id = "myList">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+			   <option value = "5">five</option>
+               <option value = "6">six</option>
+               <option value = "7">seven</option>
+               <option value = "8">eight</option>
+			    <option value = "9">nine</option>
+               <option value = "10">ten</option>
+			   
+             </select>
+          </p>
+       </fieldset>
+		
+			<input type="checkbox" name="Liked your website" value="Dislike"> Liked your website<br>
+		<input type="checkbox" name="Disliked your website" value="Like"> Disliked your website<br>
+		
+	<input type="submit" id="submit" value="Submit" class="btn">
+     </form>
+	
+
+
+
+	<footer>
+<p><a href="https://github.com/" target="_blank"><img src="images/github.png" alt="social icon for github"></a>
+				<a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="social icon for linkedin"></a><br>
+	<a href="mailto:lanechadwck@mycwi.cc">lanechadwck@mycwi.cc</a><br>
+	<a href="tel:1-208-696-9382">208-696-9382</a>
+	</footer>
+</main>
+</body>
+</html>
