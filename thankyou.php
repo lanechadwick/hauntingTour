@@ -9,7 +9,7 @@
     
     // Validate inputs
     if  ($vistorName == null || $vistorEmail == null ||
-        $vistorPhone == null ||  $vistorEmailButton == null || $vistorComment == null) {
+        $vistorPhone == null ||  $vistorComment == null) {
         $error = "Invalid input data. Check all fields and try again.";
         /* include('error.php'); */
         echo "Form Data Error: " . $error; 
