@@ -7,10 +7,10 @@
     Tutorial 4
     Tutorial Case
     
+    Home Page of the Komatsu Family at Tree and Book
     Author: Lane Chadwick   
-    Date:   2/12/20
+    Date:   08/20/19
 
-Mod Log: link to database.
     Filename: SP_Home.html
    -->
    
@@ -27,24 +27,50 @@ Mod Log: link to database.
 </head>
 
 <body>
-   
 
    <article>
       <header>
-         <div class="container">
+        <div class="container">
             <nav>
                   <a id="navicon" href="#"><img src="images/navicon4.png" alt="navicon" /></a>
                    <ul>
-                   <li><a href="SP_Home.html">Home</a></li>
+                 <li><a href="SP_Home.html">Home</a></li>
                  <li><a href="SP_Tours.html">Tours</a></li>
                  <li><a href="SP_About.html">Feedback</a></li>
                  <li><a href="SP_Mission.html">Gallery</a></li>
                  <li><a href="login.php">admin</a></li>
                    </ul>
                   </nav>
-               </div>
-         <h1>Error!<br>Comeback Later!</h1>		 
+               </div>		 
       </header>
+      <!--Survey-->
+      <section>
+        <h1>Login</h1>
+        <form id="survey" action="admin.php" method="post">
+           <fieldset id="custInfo">
+              <legend>Please enter your credentials</legend>
+              <div class="formRow">
+              <label for ="name">Name*</label>
+              <input name="name" id="custName" type="text" placeholder="First Name" required />
+              </div>
+  
+  
+              <div class="formRow">
+              <label for ="password">Password*</label>
+              <input name="password" id="password" type="password" required />
+              </div>
+           </fieldset>
+           
+           <div id="buttons">
+              <input type="submit" value="login" />
+              <input type="reset" value="Cancel" />
+           </div>
+           <!--End of Survey-->
+  
+        </form>
+  
+       
+     </section>
       
       
       <aside>
@@ -55,7 +81,7 @@ Mod Log: link to database.
    
    <footer>
            
-     
+      </nav>
 
    </footer>
    

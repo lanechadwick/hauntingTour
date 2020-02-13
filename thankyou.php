@@ -1,5 +1,6 @@
 <?php
-    
+    require('./model/database.php');
+    $error_message = null;
     $vistorName = filter_input(INPUT_POST, 'custName');
     $vistorEmail = filter_input(INPUT_POST, 'custEmail');
     $vistorPhone = filter_input(INPUT_POST, 'custPhone');
@@ -9,7 +10,7 @@
     
     // Validate inputs
     if  ($vistorName == null || $vistorEmail == null ||
-        $vistorPhone == null ||  $vistorComment == null) {
+        $vistorPhone == null ||  $vistorComment == null  ) {
         $error = "Invalid input data. Check all fields and try again.";
         /* include('error.php'); */
         echo "Form Data Error: " . $error; 
@@ -20,7 +21,8 @@
             $password = 'Pa$$w0rd';
 
             try {
-                $db = new PDO($dsn, $username, $password);
+//                $db = new PDO($dsn, $username, $password);
+                $db = Database::getDB();
 
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
@@ -28,9 +30,8 @@
                 echo "DB Error: " . $error_message; 
                 exit();
             }
-
-            // Add the product to the database  
-            $query = 'INSERT INTO visitor
+            if (!$error_message) {
+                    $query = 'INSERT INTO visitor
                          (vistorName, vistorEmail, vistorPhone, vistorEmailButton, vistorComment)
                       VALUES
                          (:vistorName, :vistorEmail, :vistorPhone, :vistorEmailButton, :vistorComment)';
@@ -40,10 +41,20 @@
             $statement->bindValue(':vistorPhone', $vistorPhone);
             $statement->bindValue(':vistorEmailButton', $vistorEmailButton);
             $statement->bindValue(':vistorComment', $vistorComment);
-            $statement->execute();
+//            $statement->execute();
+            $count = $statement->execute();
+            
             $statement->closeCursor();
             /* echo "Fields: " . $visitor_name . $visitor_email . $visitor_phone . $visitor_email_button . $visitor_comment; */
+            if ($count < 1) {
+                $error_message = "We are experiencing technical difficulties, Please come back later." ;
+            } else {
+                $error_message = "Thank you, $vistorName, for contacting us! I will get back to you shortly.";
+            }
+         }
 
+            // Add the product to the database  
+        
 }
 
 ?>
@@ -74,13 +85,17 @@
                  <li><a href="SP_Tours.html">Tours</a></li>
                  <li><a href="SP_About.html">Feedback</a></li>
                  <li><a href="SP_Mission.html">Gallery</a></li>
+                 <li><a href="login.php">admin</a></li>
                    </ul>
                   </nav>
                </div>
-         <h1>Contact Scary Places</h1>		 
+          <h1>Contact Scary Places</h1><br>
+         
+      
+          	 
       </header>
       <section>
-          <h2>Thank you, <?php echo$vistorName; ?>, for contacting us! I will get back to yo shortly.</h2>
+         <h2><?php echo $error_message; ?></h2>
       </section>
       
       
