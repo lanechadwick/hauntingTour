@@ -1,31 +1,30 @@
-/********************************************************************/
-/*  Date	Name	Description                                 */
-/*  --------------------------------------------------------------- */
-/*                                                                  */
-/*  1/17/2020  Lane Chadwick   Initial deployment of hauntingTour Script. Program accepts input.    */
-/*************************************/
-
 DROP DATABASE IF EXISTS hauntingInfo;
+go
 CREATE DATABASE hauntingInfo;
+go
 USE hauntingInfo;
+go
 
-CREATE TABLE IF NOT EXISTS employee
+
+CREATE TABLE employee
 (
-    employeeID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    employeeID INT NOT NULL PRIMARY KEY identity, --change auto increment to identity 
     fristName VARCHAR(255) NOT NULL,
     lastName VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS visitor
+
+CREATE TABLE visitor
 (
-    visitorID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    visitorID INT NOT NULL PRIMARY KEY identity,
     vistorName VARCHAR(255) NOT NULL,
     vistorPhone VARCHAR(15) NOT NULL,
     vistorEmail VARCHAR(255) NOT NULL,
-    vistorEmailButton BOOLEAN NOT NULL,
+    vistorEmailButton BIT NOT NULL,
     vistorComment VARCHAR(500) NOT NULL,
-    employeeID INT NOT NULL REFERENCES employee(employeeID)
 );
+
+
 
 INSERT INTO employee
 (fristName, lastName)
@@ -45,13 +44,15 @@ VALUES
   ('Jeff', 'Goldblom'),
   ('Alan', 'Grant'),
   ('Hugh', 'Jackman'),
-  ('Tom', 'Hardy')
+  ('Tom', 'Hardy'),
   ('Fighting', 'Pickle'),
   ('King','Kong'),
   ('Godzilla', 'Japan'),
   ('Brock', 'Chadwick'),
   ('Kim', 'Berly');
+  go
 
+ 
   INSERT INTO visitor
   (vistorName, vistorPhone, vistorEmail, vistorEmailButton, vistorComment)
   VALUES
@@ -76,16 +77,24 @@ VALUES
   ('Tom Brady','208-129-1234','brady@me.com','0','where are my rings'),
   ('Arron Rodgers','208-111-1514','rodgers@me.com','1','no where are my rings'),
   ('Lamar Jackson','208-555-1549','Jackson@me.com','0','damn i suck');
+  go;
 
-  
+  drop procedure if exists InsertVisitor
+  go
 
+   create procedure InsertVisitor
+	 @vistorName varchar(255), @vistorPhone varchar(255), @vistorEmail varchar(255), @vistorEmailButton bit, @vistorComment varchar(500)
+	 as
+	 insert into visitor
+	  (vistorName , vistorPhone, vistorEmail, vistorEmailbutton, vistorComment )
+	 VALUES
+	 (@vistorName, @vistorPhone, @vistorEmail, @vistorEmailbutton, @vistorComment)
+	 go
 
+	 execute InsertVisitor 'Lamar Jackson','208-555-1549','Jackson@me.com',0,'damn i suck'
 
-  
-
-
-  
-
-
-    
+	 CREATE USER [EJApp] For LOGIN [EJApp] WITH DEFAULT_SCHEMA=[dbo]
+	 go
+	 grant execute on InsertVisitor to EJApp
+	 go
 
