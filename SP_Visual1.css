@@ -1,0 +1,361 @@
+﻿@charset "utf-8";
+
+/*
+   7E
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Tutorial Case
+   
+   Visual Style Sheet for Tree and Book Family Home Page
+   Author: Lane Chadwick
+   Date:   08/30/2019
+   
+   Filename: tb_visual1.css
+
+*/
+/* font-family */
+@font-face {
+  font-family: Eutemia;
+  src: url(Eutemia.ttf) ;
+  font-family: 'Lato', sans-serif;
+}
+
+/*Title */
+header h1 {
+  text-align: center;
+  font-family: Eutemia;
+  opacity: .90;
+  font-size: 150px;
+  width: 100%;
+  height: 70%;
+  padding: -10px -10px -10px -10px;
+  color: rgb(163, 1, 1);
+}
+
+section h2 {
+  color: red;
+}
+
+/*navbar styling */
+header nav ul li {
+  background-color: rgb(15, 68, 70);
+  font-size: 2em;   
+  padding: 0px 10px;
+  display: inline;
+
+}
+
+header nav ul li a {
+  color: rgb(163, 1, 1);
+  display: block;
+  width: 100%;
+}
+
+header nav ul li a:hover {
+  color: white;
+  background-color: black;
+}
+
+a#navicon {
+  display: none;
+}
+
+/* Container Styles */
+table.container2  {
+  margin-right: 20%;
+
+}
+table.container2mobile {
+  display: none;
+}
+
+
+/* Section Styling */
+
+section {
+  margin: 30px 3%;
+ 
+}
+
+section h1 {
+  font-size: 2.5em;
+  color: rgb(179, 20, 25);
+  margin-top: 35px;
+  font-family: Eutemia;
+  
+}
+
+
+section p {
+  text-align: center;
+  color: rgb(179, 20, 25);
+  background-color: rgb(15, 68, 70);
+  font-family: Eutemia;
+  font-size: 120px;
+  border-radius: 50px 50px;
+  padding:20px 20px 20px 20px;
+  background-image: url("images/scary.gif");
+ 
+}
+div.mState {
+   text-align: center;
+  color: rgb(179, 20, 25);
+  opacity: .9;
+  font-family: Eutemia;
+  font-size: 80px;
+  border-radius: 50px 50px;
+  padding:20px 20px 20px 20px;
+}
+body >  aside:first-of-type {
+  -webkit-flex: 1 1 265px;
+  flex: 1 1 265px;
+}
+
+body > aside:last-of-type {
+  -webkit-flex: 1 1 325px;
+  flex: 1 1 325px;
+}
+
+body > aside {
+  color: rgb(81, 81, 81);   
+  margin: 25px 25px 25px 0px;
+  background-color: rgb(15, 68, 70);
+  box-shadow: inset 15px 15px 25px rgba(101, 101, 101, 0.4),
+              inset -15px -15px 25px rgba(101, 101, 101, 0.4);
+  border-radius: 35px;
+  padding: 10px;
+}
+
+body > aside > h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 15px;
+  color: black;
+}
+
+body >  aside > p {
+  margin: 15px 0px 20px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+/*FigureBox  styling*/
+figure{
+  margin: 20px auto 0px;
+  width: 80%;
+}
+figure img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  opacity: .20;
+  border-radius: 150px 150px 140px 140px;
+
+}
+/* Form Layout Styles */
+form#survey {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+  background-color: rgb(179, 20, 25);
+  border-radius: 20px;
+  -webkit-flex: 1 1 300px;
+  flex: 1 1 300px;
+  font-size: 0.85em;
+  padding: 10px;
+  margin: 10px;
+}
+
+div.formRow {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 7px 0px;
+}
+div.formRow > * {
+  -webkit-flex: 1 1 150px;
+  flex: 1 1 150px;
+}
+
+
+/* Legend Styles */
+Legend{
+ background-color: rgb(179, 20, 25); 
+ color: white;
+ padding: 5px;
+}
+
+
+
+/* Text Area Styles */
+
+textarea {
+  margin-top: 10px;
+  height: 100px;
+  width: 95%;
+}
+
+div.mState {
+  text-align: center;
+  color: rgb(179, 20, 25);
+  opacity: .9;
+  font-family: Eutemia;
+  font-size: 80px;
+  border-radius: 50px 50px;
+  padding:20px 20px 20px 20px;
+}
+div.mState h1 {
+  text-align: center;
+  font-family: Eutemia;
+  opacity: .90;
+  font-size: 150px;
+  width: 100%;
+  height: 70%;
+  padding: -10px -10px -10px -10px;
+  color: rgb(163, 1, 1);
+}
+
+/* Spinner Styles */
+
+div.formRow > input#dineSpin {
+  -webkit-flex: 0 0 50px;
+  flex: 0 0 50px;
+}
+
+
+/* Form Button Styles */
+
+div#buttons {
+  text-align: center;
+  width: 100%;
+}
+
+input [type='submit'], input[type='rest'] {
+  font-size: 1.2em;
+  padding: 5px;
+  margin: 15px;
+}
+
+
+/* Validation Styles */
+
+input:focus, textarea:focus {
+  background-color: rgb(220, 255, 220);
+}
+
+input#name:focus:valid,
+input#zip:focus:valid,
+input#phone:focus:valid,
+input#mail:focus:valid {
+  background: rgb(220, 255, 220) url(rb-valid.png) bottom right/contain no-repeat;
+}
+
+input#name:focus:invalid,
+input#zip:focus:invalid,
+input#phone:focus:invalid,
+input#mail:focus:invalid {
+  background: rgb(255, 232, 233) url(rb_invalid.png) bottom right/contain no-repeat;
+}
+
+/*body image is not mine*/
+  
+  body {
+    background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+    
+  }
+.carousel-inner > .item a img {
+    margin: auto;
+}
+
+.carousel-inner > .item img {
+    margin: auto;
+    
+}
+  
+ 
+  
+
+  /* ===================
+  Mobile styles: 0px to 480px
+     =================== */
+     @media only screen and (max-width: 480px){
+       .container li {
+         display: block;
+        margin-right: 12em;
+
+       }
+       a#navicon {
+        display: block;
+     }
+     
+     header nav ul {
+        display: none;
+     }
+     
+     header nav ul li {
+        font-size: 1em;
+        line-height: 1.3em;
+        height: 1.3em;
+        
+     }
+     
+     a#navicon:hover+ul, header nav ul:hover {
+        display: block;
+     }
+  }
+  div.container2 table{
+    display: none;
+    
+ }
+
+ 
+  
+
+  
+      /* =========================
+  Mobile styles: 769px and greater
+     =============================*/
+     @media only screen and (min-width: 769px) {
+
+    
+   section#main {
+    float: left;
+    width: 70%;
+ }
+ 
+ section#right {
+    float: left;
+    width: 30%;
+ }
+ 
+ header nav ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+ }
+ 
+ header nav ul li {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    background-color: none;
+ }
+}

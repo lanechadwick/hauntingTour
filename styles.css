@@ -1,0 +1,201 @@
+/* Author: Lane Chadwick
+   Modification log
+   ----September 25th, 2019------
+   ---Nav bar changes including styling, alignment, and mobile view----
+   ---October 23rd, 2019-------
+   ----Media Query changes, carousel added, home pic styles------
+
+
+/* Font Stying */
+@font-face {
+	font-family: 'Cantarell';
+	src: url('../fonts/Cantarell-Regular-webfont.woff')format('woff'),
+			url('../fonts/Cantarell-Regular-webfont.ttf')format('truetype'),
+			url('../fonts/Cantarell-Regular-webfont.eot')format('embedded-opentype');
+}
+		 
+ 
+/* Navbar Styling */
+header nav ul li {
+	background-color: #128E54;
+	font-size: 2em;   
+	padding: 0px 10px;
+	display: inline;
+	list-style: none;
+  
+  }
+  
+  header nav ul li a {
+	color: rgb(163, 1, 1);
+	display: block;
+	width: 100%;
+  }
+  
+  header nav ul li a:hover {
+	color: white;
+	background-color: black;
+  }
+  
+  a#navicon {
+	display: none;
+  }
+
+
+/* Header & Pic Stylings */
+
+header {
+    background-color: #128E54;
+}
+
+#homepic img {
+	border-radius: 50%!important;
+
+}
+/*table styles*/
+table {
+  width: 100%;
+   background-image: linear-gradient(#FFFFFF, #F0F9E6);
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #DFA478;
+  border-style: solid;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+table td, th {
+  border-width: 2px;
+  border-color: #DFA478;
+  border-style: solid;
+  padding: 15px;
+}
+
+table thead {
+  background-color: #DFA478;
+}
+.worklist {
+	 background-image: linear-gradient(#FFFFFF, #F0F9E6);
+	 list-style: none;
+}
+
+/*Main styles*/
+
+body {
+	text-align: center;
+	background-color:#B8D1EB;
+	color:#000000;
+	font-family: "Times New Roman", Times, serif;
+}
+footer{
+font-size: .75em;
+text-align: center;
+}
+article p {
+	 background-image: linear-gradient(#FFFFFF, #F0F9E6);
+	
+}
+#p1 {
+	display: none;
+}
+
+.mainContainer{
+	background:#333;
+	/* Set the container width and height, if you change it, you have to reload to see it take effect */
+	width:20%;
+	height:200px;
+	margin:auto;
+	margin-top:100px;
+	position:relative;
+  }
+
+
+  /* ===================
+  Mobile styles: 0px to 480px
+     =================== */
+     @media only screen and (max-width: 480px){
+		.container li {
+		  display: block;
+		 margin-right: 12em;
+ 
+		}
+		a#navicon {
+		 display: block;
+	  }
+
+	  #homepic {
+		  display: none;
+	  }
+	  #pongpic {
+		width: 50%;
+		height: 50%;
+		
+	  }
+	  header nav ul {
+		 display: none;
+		
+	  }
+	  
+	  header nav ul li {
+		 font-size: 1em;
+		 line-height: 1.3em;
+		 height: 1.3em;
+		 margin-left: 34%;
+		 
+	  }
+
+	  #p1 {
+		  display: block!important;
+	  }
+
+	  button {
+		  display: none;
+	  }
+
+
+	  
+	  a#navicon:hover+ul, header nav ul:hover {
+		 display: block;
+	  }
+   }
+   div.container2 table{
+	 display: none;
+	 
+  }
+ 
+  
+   
+ 
+   
+	   /* =========================
+   Mobile styles: 769px and greater
+	  =============================*/
+	  @media only screen and (min-width: 769px) {
+ 
+	 
+	section#main {
+	 float: left;
+	 width: 70%;
+  }
+  
+  section#right {
+	 float: left;
+	 width: 30%;
+  }
+  
+  header nav ul {
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-flow: row nowrap;
+	 flex-flow: row nowrap;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+  }
+  
+  header nav ul li {
+	 -webkit-flex: 0 1 auto;
+	 flex: 0 1 auto;
+	 background-color: none;
+  }
+ }
+ 
+
